@@ -1,0 +1,33 @@
+{
+ "commit": "b9d1c26",
+ "results": [
+  {
+   "n": 1,
+   "title": "get_objects_from_dataset has no else branch",
+   "where": "src/post_eval.py:410",
+   "triggered": true,
+   "detail": "UnboundLocalError: cannot access local variable 'objects' where it is not associated with a value"
+  },
+  {
+   "n": 4,
+   "title": "custom branch unconditionally overrides --preprocess (force_* unreachable, silent)",
+   "where": "src/utils.py:172",
+   "triggered": false,
+   "detail": "{'requested': 'force_mask_rotation', 'masking_returned': {'blade_view': False, 'blade_same': False, 'blade_illumination': False}, 'rotation_returned': {'blade_view': True, 'blade_same': True, 'blade_illumination': True}}"
+  },
+  {
+   "n": 3,
+   "title": "create_sample_plots does not forward data_root to get_dataset_info (static check: relative import prevents standalone execution)",
+   "where": "src/visualize.py:61",
+   "triggered": true,
+   "detail": "RuntimeError: create_sample_plots(line 61) accepts data_root but calls get_dataset_info(line 63) with kwargs ['preprocess'] -> get_dataset_info raises ValueError: Please provide 'data_path'"
+  },
+  {
+   "n": 2,
+   "title": "image-level evaluation depends on TIFFs written only under eval_segm",
+   "where": "src/post_eval.py:418",
+   "triggered": true,
+   "detail": "RuntimeError: eval_finished_run(line 418) couples image-level evaluation to TIFF files written only when eval_segm=True -> empty array -> ValueError: Found array with 0 sample(s)"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "archive_appledouble": 574,
+ "archive_dsstore": 153,
+ "payload_appledouble": 287,
+ "payload_dsstore": 102,
+ "leading_invalid_run": {
+  "background": 18,
+  "view": 13,
+  "illumination": 2
+ }
+}

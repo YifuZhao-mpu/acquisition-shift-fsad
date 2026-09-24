@@ -1,0 +1,25 @@
+# 数据集不随仓库分发（MVTec / AeBAD 的许可不允许再分发；M2AD 见 README 的下载脚本）
+data/
+experiment/AnomalyDINO/
+
+# 运行产物
+experiment/s1/logs/
+experiment/s1/queue*/
+*.r2bak
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# 表格由 make_tables*.py 生成到 paper/tables/，不入库
+paper/

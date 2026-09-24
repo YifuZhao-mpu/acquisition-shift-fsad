@@ -1,0 +1,11 @@
+# 本文全部结果产出时的环境（Python 3.13.5, CUDA 11.8, Tesla V100-DGXS-32GB）
+torch==2.7.1+cu118
+torchvision==0.22.1+cu118
+numpy==2.5.1
+scipy==1.15.3
+opencv-python==4.11.0
+timm==1.0.29
+faiss-gpu==1.14.3
+
+# DINOv2 由 torch.hub 拉取（facebookresearch/dinov2），无需 pip 安装。
+# DeiT / ResNet 权重由 timm 与 torchvision 拉取。

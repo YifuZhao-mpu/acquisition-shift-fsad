@@ -1,0 +1,145 @@
+{
+ "index": "tone-map R^2 on binned-median fit, foreground only",
+ "cells": [
+  {
+   "mode": "exposure",
+   "severity": 0.33,
+   "tone_r2": 0.9972540983531665,
+   "group": "tone"
+  },
+  {
+   "mode": "exposure",
+   "severity": 0.67,
+   "tone_r2": 0.9976787308964573,
+   "group": "tone"
+  },
+  {
+   "mode": "exposure",
+   "severity": 1.0,
+   "tone_r2": 0.9971766162291802,
+   "group": "tone"
+  },
+  {
+   "mode": "gamma",
+   "severity": 0.33,
+   "tone_r2": 0.9961391212292301,
+   "group": "tone"
+  },
+  {
+   "mode": "gamma",
+   "severity": 0.67,
+   "tone_r2": 0.9946611323096418,
+   "group": "tone"
+  },
+  {
+   "mode": "gamma",
+   "severity": 1.0,
+   "tone_r2": 0.9914554345475426,
+   "group": "tone"
+  },
+  {
+   "mode": "wb",
+   "severity": 0.33,
+   "tone_r2": 0.9969519933610411,
+   "group": "tone"
+  },
+  {
+   "mode": "wb",
+   "severity": 0.67,
+   "tone_r2": 0.9970430740230216,
+   "group": "tone"
+  },
+  {
+   "mode": "wb",
+   "severity": 1.0,
+   "tone_r2": 0.9970834121766485,
+   "group": "tone"
+  },
+  {
+   "mode": "gradient",
+   "severity": 0.33,
+   "tone_r2": 0.7958921751186747,
+   "group": "spatial"
+  },
+  {
+   "mode": "gradient",
+   "severity": 0.67,
+   "tone_r2": 0.5753226158204623,
+   "group": "spatial"
+  },
+  {
+   "mode": "gradient",
+   "severity": 1.0,
+   "tone_r2": 0.4099081446236104,
+   "group": "spatial"
+  },
+  {
+   "mode": "specular",
+   "severity": 0.33,
+   "tone_r2": 0.7686959978845762,
+   "group": "spatial"
+  },
+  {
+   "mode": "specular",
+   "severity": 0.67,
+   "tone_r2": 0.5275254167012955,
+   "group": "spatial"
+  },
+  {
+   "mode": "specular",
+   "severity": 1.0,
+   "tone_r2": 0.37189157880507034,
+   "group": "spatial"
+  },
+  {
+   "mode": "shadow",
+   "severity": 0.33,
+   "tone_r2": 0.9273107825939969,
+   "group": "spatial"
+  },
+  {
+   "mode": "shadow",
+   "severity": 0.67,
+   "tone_r2": 0.7843204951306949,
+   "group": "spatial"
+  },
+  {
+   "mode": "shadow",
+   "severity": 1.0,
+   "tone_r2": 0.6369951216083218,
+   "group": "spatial"
+  }
+ ],
+ "tone": [
+  0.9972540983531665,
+  0.9976787308964573,
+  0.9971766162291802,
+  0.9961391212292301,
+  0.9946611323096418,
+  0.9914554345475426,
+  0.9969519933610411,
+  0.9970430740230216,
+  0.9970834121766485
+ ],
+ "spatial": [
+  0.7958921751186747,
+  0.5753226158204623,
+  0.4099081446236104,
+  0.7686959978845762,
+  0.5275254167012955,
+  0.37189157880507034,
+  0.9273107825939969,
+  0.7843204951306949,
+  0.6369951216083218
+ ],
+ "tone_range": [
+  0.9914554345475426,
+  0.9976787308964573
+ ],
+ "spatial_range": [
+  0.37189157880507034,
+  0.9273107825939969
+ ],
+ "separated": true,
+ "gap": 0.06414465195354568
+}

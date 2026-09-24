@@ -94,7 +94,8 @@ def tab_m2ad_full(A, agg="meantop1p"):
          r"\caption{M2AD per illumination setting. Each cell is the paired change $\Delta$ in "
          r"image AUROC from the matched setting \texttt{I01}, averaged over part families, "
          r"views and support draws. \emph{tone} is the tone-dominance index of "
-         r"Table~\ref{tab:m2adphys}. \emph{arch} is the mean of the two architecture contrasts "
+         r"Table~\ref{M-tab:m2adphys} of the main paper. \emph{arch} is the mean of the two "
+         r"architecture contrasts "
          r"(ViT $-$ CNN within each pretraining level); positive means the ViTs lose less.}",
          r"\label{tab:m2adfull}\centering\footnotesize",
          r"\setlength{\tabcolsep}{4pt}",
@@ -130,13 +131,13 @@ def tab_m2ad_phys():
     if not f.exists():
         (OUT / "tab_m2ad_phys.tex").write_text("%% pending: m2ad_physical\n"); return False
     P = json.load(open(f))["by_illum"]
-    L = [r"\begin{table}[t]",
+    L = [r"\begin{table}[!t]",
          r"\caption{Physical descriptors of M2AD's nine shifted illumination settings, "
          r"measured pairwise against the matched setting \texttt{I01} on the same specimen "
          r"and viewpoint, with the same function used for the synthetic grid "
-         r"(Table~\ref{tab:physical}). The tone-dominance index "
+         r"(Supplementary Table~\ref{S-tab:physical}). The tone-dominance index "
          r"$1/(1+(\Delta L_{p95}-\Delta L)/\Delta L)$ separates the synthetic tone and spatial "
-         r"families with no overlap (Sec.~\ref{sup:m2ad}).}",
+         r"families with no overlap (Supplementary Sec.~\ref{S-sup:m2ad}).}",
          r"\label{tab:m2adphys}\centering\footnotesize",
          r"\setlength{\tabcolsep}{4pt}",
          r"\begin{tabular}{@{}lrrrrr@{}}", r"\toprule",
@@ -160,10 +161,10 @@ def tab_m2ad_agg():
         if not f.exists(): continue
         T = json.load(open(f)); have.append(agg)
         for nm, key in (("M1 arch., self-sup.", "M1-自监督臂"),
-                        ("M1 arch., supervised", "M1-监督臂"),
-                        ("M2 pretraining, ViT arm", "M2-ViT臂"),
-                        ("M2 pretraining, CNN arm", "M2-CNN臂"),
-                        ("M3 tone-dominance $\\rho$", "M3")):
+                        ("M1 arch., sup.", "M1-监督臂"),
+                        ("M2 pretrain., ViT", "M2-ViT臂"),
+                        ("M2 pretrain., CNN", "M2-CNN臂"),
+                        ("M3 tone $\\rho$", "M3")):
             k = f"all|{key}"
             if k in T: rows.append((agg, nm, T[k]))
     if len(have) < 2:
@@ -176,8 +177,8 @@ def tab_m2ad_agg():
          r"robustness check the preregistration also commits to. Brackets give the "
          r"bootstrap 95\% interval; $\checkmark$ marks a test that survives "
          r"Holm--Bonferroni over the preregistered family of six.}",
-         r"\label{tab:m2adagg}\centering\footnotesize",
-         r"\setlength{\tabcolsep}{3pt}",
+         r"\label{tab:m2adagg}\centering\scriptsize",
+         r"\setlength{\tabcolsep}{2pt}",
          r"\begin{tabular}{@{}lll@{}}", r"\toprule",
          r"Test & \texttt{mean\_top1p} & \texttt{max}\\", r"\midrule"]
     d = {(a, n): v for a, n, v in rows}
@@ -195,7 +196,7 @@ def tab_m2ad_agg():
             v = d.get((agg, n))
             if v is None: cells.append("---"); continue
             mark = r"\,$\checkmark$" if v.get("holm") else ""
-            cells.append(f"${v['est']:+.3f}$ $[{v['lo']:+.3f},{v['hi']:+.3f}]${mark}")
+            cells.append(f"${v['est']:+.3f}\\,[{v['lo']:+.3f},{v['hi']:+.3f}]${mark}")
         L.append(f"{n} & " + " & ".join(cells) + r"\\")
     L += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
     (OUT / "tab_m2ad_agg.tex").write_text("\n".join(L) + "\n")

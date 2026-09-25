@@ -1,8 +1,8 @@
-# Which Acquisition Shift Breaks Few-Shot Industrial Anomaly Detection?
+# Identifying the Acquisition Shifts That Break Few-Shot Industrial Anomaly Detection
 
 Code, per-image scores, preregistrations and analysis scripts for the paper
-*Which Acquisition Shift Breaks Few-Shot Industrial Anomaly Detection? A
-Controlled Attribution Across Representation Families.*
+*Identifying the Acquisition Shifts That Break Few-Shot Industrial Anomaly
+Detection: A Controlled Attribution Across Representation Families.*
 
 Few-shot industrial anomaly detection on frozen features is chosen for
 deployability, and its failure mode in deployment is benign acquisition change
@@ -175,8 +175,9 @@ wherever it is cloned. Set `IADSHIFT_ROOT` to override.
 
 ```bibtex
 @article{zhao2026acquisitionshift,
-  title  = {Which Acquisition Shift Breaks Few-Shot Industrial Anomaly
-            Detection? A Controlled Attribution Across Representation Families},
+  title  = {Identifying the Acquisition Shifts That Break Few-Shot Industrial
+            Anomaly Detection: A Controlled Attribution Across Representation
+            Families},
   author = {Zhao, Yifu and Zou, Xiaofan and Wei, Junhao and Li, Yanxiao and
             Li, Haochen and Im, Sio-Kei and Wang, Yapeng and Yang, Xu},
   year   = {2026}

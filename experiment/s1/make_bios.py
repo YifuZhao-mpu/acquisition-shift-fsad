@@ -17,9 +17,8 @@ OUT = ROOT / "paper/sections/11_biographies.tex"
 ORDER = [
     ("Yifu Zhao",   "Yifu_Zhao",   None),
     ("Xiaofan Zou", "Xiaofan_Zou", None),
-    ("Junhao Wei",  "Junhao_Wei",  None),
     ("Yanxiao Li",  "Yanxiao_Li",  None),
-    ("Haochen Li",  "Haochen_Li",  None),
+    ("Junhao Wei",  "Junhao_Wei",  None),
     ("Sio-Kei Im",  "Sio-Kei_Im",  None),
     ("Yapeng Wang", "Yapeng_Wang", "Member, IEEE"),
     ("Xu Yang",     "Xu_Yang",     None),

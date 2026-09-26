@@ -178,8 +178,8 @@ wherever it is cloned. Set `IADSHIFT_ROOT` to override.
   title  = {Identifying the Acquisition Shifts That Break Few-Shot Industrial
             Anomaly Detection: A Controlled Attribution Across Representation
             Families},
-  author = {Zhao, Yifu and Zou, Xiaofan and Wei, Junhao and Li, Yanxiao and
-            Li, Haochen and Im, Sio-Kei and Wang, Yapeng and Yang, Xu},
+  author = {Zhao, Yifu and Zou, Xiaofan and Li, Yanxiao and Wei, Junhao and
+            Im, Sio-Kei and Wang, Yapeng and Yang, Xu},
   year   = {2026}
 }
 ```
